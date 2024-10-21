@@ -115,3 +115,13 @@ pub fn write(filename: &str, data: &str) {
     let path = path::book_gen().join(filename);
     fs::write(path, data).expect(&error);
 }
+  {
+        test: /\.tsx?$/,
+        exclude: /(node_modules|.webpack)/,
+        loader: 'ts-loader',
+    },
+    {
+        test: /\.(png|svg|jpg|jpeg|gif|ttf)$/i,
+        type: 'asset/resource',
+    },
+]
